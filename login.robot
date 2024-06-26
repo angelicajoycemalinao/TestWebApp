@@ -8,8 +8,8 @@ Test case 1: Positive LogIn test
     Open Browser    ${URL}      ${BROWSER}
     Maximize Browser Window
     Wait Until Page Contains    Test Login
-    Input Text    ${USERNAME_XPATH}    student
-    Input Password    ${PASSWORD_XPATH}    Password123
+    Input Text    ${USERNAME_XPATH}    ${USERNAME}
+    Input Password    ${PASSWORD_XPATH}     ${PASSWORD}
     Click Element    ${SUBMIT_BTN}
     Wait Until Location Contains   practicetestautomation.com/logged-in-successfully/
     Page Should Contain    Congratulations

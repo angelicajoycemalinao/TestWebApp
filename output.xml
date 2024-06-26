@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-06-26T18:36:49.773144" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/Users/chellicapple/PycharmProjects/TestLogin/login.robot">
+<test id="s1-t1" name="Test case 1: Positive LogIn test" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:49.862911" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T18:36:49.862781" elapsed="2.305805"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-26T18:36:52.169009" elapsed="0.333758"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Test Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-26T18:36:52.503095" elapsed="0.013577"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:52.517987" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<arg>${USERNAME_XPATH}</arg>
+<arg>student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:52.517021" elapsed="0.117634"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:52.635054" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-26T18:36:52.652283" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD_XPATH}</arg>
+<arg>Password123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:52.634880" elapsed="0.046883"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:52.682079" level="INFO">Clicking element 'id:submit'.</msg>
+<arg>${SUBMIT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:52.681921" elapsed="0.738679"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>practicetestautomation.com/logged-in-successfully/</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-06-26T18:36:53.420864" elapsed="0.003099"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:53.430562" level="INFO">Current page contains text 'Congratulations'.</msg>
+<arg>Congratulations</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-06-26T18:36:53.424089" elapsed="0.006527"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:53.438520" level="INFO">Current page contains text 'successfully logged in'.</msg>
+<arg>successfully logged in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-06-26T18:36:53.430765" elapsed="0.007808"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:53.446553" level="INFO">Current page contains element 'id:loop-container'.</msg>
+<arg>id:loop-container</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-06-26T18:36:53.438715" elapsed="0.007957"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T18:36:53.446921" elapsed="0.073884"/>
+</kw>
+<status status="PASS" start="2024-06-26T18:36:49.862384" elapsed="3.658563"/>
+</test>
+<test id="s1-t2" name="Test case 2: Negative username test" line="20">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:53.521460" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T18:36:53.521323" elapsed="1.988225"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-26T18:36:55.509861" elapsed="0.321635"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:55.832093" level="INFO">Typing text 'Students' into text field 'id:username'.</msg>
+<arg>${USERNAME_XPATH}</arg>
+<arg>${INV_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:55.831799" elapsed="0.118929"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:55.951334" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-26T18:36:55.969860" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD_XPATH}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:55.951055" elapsed="0.046884"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:55.998232" level="INFO">Clicking element 'id:submit'.</msg>
+<arg>${SUBMIT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:55.998094" elapsed="0.025964"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:56.040313" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-06-26T18:36:56.024200" elapsed="0.016170"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T18:36:56.040498" elapsed="0.071733"/>
+</kw>
+<status status="PASS" start="2024-06-26T18:36:53.521112" elapsed="2.591275"/>
+</test>
+<test id="s1-t3" name="Test case 3: Negative password test" line="29">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:56.112960" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T18:36:56.112806" elapsed="1.970650"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-26T18:36:58.084216" elapsed="0.318464"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:58.403276" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<arg>${USERNAME_XPATH}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:58.402941" elapsed="0.131882"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:58.535244" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-26T18:36:58.553697" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD_XPATH}</arg>
+<arg>${INV_PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:58.535035" elapsed="0.045915"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:58.581265" level="INFO">Clicking element 'id:submit'.</msg>
+<arg>${SUBMIT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T18:36:58.581102" elapsed="0.024883"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-06-26T18:36:58.623890" level="INFO">Current page contains text 'Your password is invalid!'.</msg>
+<arg>Your password is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-06-26T18:36:58.606125" elapsed="0.017902"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T18:36:58.624172" elapsed="0.071404"/>
+</kw>
+<status status="PASS" start="2024-06-26T18:36:56.112566" elapsed="2.583175"/>
+</test>
+<doc>Login Script using Selenium with Robot Framework</doc>
+<status status="PASS" start="2024-06-26T18:36:49.773835" elapsed="8.922273"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

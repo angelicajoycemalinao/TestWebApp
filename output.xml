@@ -1,165 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-06-26T18:36:49.773144" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-06-26T20:33:22.634283" rpa="false" schemaversion="5">
 <suite id="s1" name="Login" source="/Users/chellicapple/PycharmProjects/TestLogin/login.robot">
-<test id="s1-t1" name="Test case 1: Positive LogIn test" line="7">
+<test id="s1-t1" name="Test Case #1: Positive LogIn test" line="7">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:49.862911" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<msg time="2024-06-26T20:33:22.725400" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-26T18:36:49.862781" elapsed="2.305805"/>
+<status status="PASS" start="2024-06-26T20:33:22.725270" elapsed="3.597493"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-26T18:36:52.169009" elapsed="0.333758"/>
+<status status="PASS" start="2024-06-26T20:33:26.323177" elapsed="0.385075"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Test Login</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-26T18:36:52.503095" elapsed="0.013577"/>
+<status status="PASS" start="2024-06-26T20:33:26.708784" elapsed="0.009038"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:52.517987" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<msg time="2024-06-26T20:33:26.718698" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
 <arg>${USERNAME_XPATH}</arg>
-<arg>student</arg>
+<arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-26T18:36:52.517021" elapsed="0.117634"/>
+<status status="PASS" start="2024-06-26T20:33:26.717983" elapsed="0.124409"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:52.635054" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2024-06-26T18:36:52.652283" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-06-26T20:33:26.842721" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-26T20:33:26.864928" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_XPATH}</arg>
-<arg>Password123</arg>
+<arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-26T18:36:52.634880" elapsed="0.046883"/>
+<status status="PASS" start="2024-06-26T20:33:26.842558" elapsed="0.055300"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:52.682079" level="INFO">Clicking element 'id:submit'.</msg>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T20:33:26.898584" level="INFO">Clicking button 'id:submit'.</msg>
 <arg>${SUBMIT_BTN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-26T18:36:52.681921" elapsed="0.738679"/>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T20:33:26.898151" elapsed="1.315453"/>
 </kw>
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>practicetestautomation.com/logged-in-successfully/</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2024-06-26T18:36:53.420864" elapsed="0.003099"/>
+<status status="PASS" start="2024-06-26T20:33:28.213787" elapsed="0.002500"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:53.430562" level="INFO">Current page contains text 'Congratulations'.</msg>
+<msg time="2024-06-26T20:33:28.223357" level="INFO">Current page contains text 'Congratulations'.</msg>
 <arg>Congratulations</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-06-26T18:36:53.424089" elapsed="0.006527"/>
+<status status="PASS" start="2024-06-26T20:33:28.216497" elapsed="0.006912"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:53.438520" level="INFO">Current page contains text 'successfully logged in'.</msg>
+<msg time="2024-06-26T20:33:28.230177" level="INFO">Current page contains text 'successfully logged in'.</msg>
 <arg>successfully logged in</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-06-26T18:36:53.430765" elapsed="0.007808"/>
+<status status="PASS" start="2024-06-26T20:33:28.223602" elapsed="0.006631"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:53.446553" level="INFO">Current page contains element 'id:loop-container'.</msg>
-<arg>id:loop-container</arg>
+<msg time="2024-06-26T20:33:28.237678" level="INFO">Current page contains element 'xpath://*[@id="loop-container"]/div/article/div[2]/div/div/div/a'.</msg>
+<arg>xpath://*[@id="loop-container"]/div/article/div[2]/div/div/div/a</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-06-26T18:36:53.438715" elapsed="0.007957"/>
+<status status="PASS" start="2024-06-26T20:33:28.230374" elapsed="0.007360"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-26T18:36:53.446921" elapsed="0.073884"/>
+<status status="PASS" start="2024-06-26T20:33:28.237923" elapsed="0.075960"/>
 </kw>
-<status status="PASS" start="2024-06-26T18:36:49.862384" elapsed="3.658563"/>
+<status status="PASS" start="2024-06-26T20:33:22.724873" elapsed="5.589170"/>
 </test>
-<test id="s1-t2" name="Test case 2: Negative username test" line="20">
+<test id="s1-t2" name="Test Case #2: Negative username test" line="20">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:53.521460" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<msg time="2024-06-26T20:33:28.314600" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-26T18:36:53.521323" elapsed="1.988225"/>
+<status status="PASS" start="2024-06-26T20:33:28.314463" elapsed="3.633488"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-26T18:36:55.509861" elapsed="0.321635"/>
+<status status="PASS" start="2024-06-26T20:33:31.948316" elapsed="0.322260"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Test Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-26T20:33:32.270757" elapsed="0.007069"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:55.832093" level="INFO">Typing text 'Students' into text field 'id:username'.</msg>
+<msg time="2024-06-26T20:33:32.278212" level="INFO">Typing text 'incorrectUser' into text field 'id:username'.</msg>
 <arg>${USERNAME_XPATH}</arg>
 <arg>${INV_USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-26T18:36:55.831799" elapsed="0.118929"/>
+<status status="PASS" start="2024-06-26T20:33:32.277973" elapsed="0.128261"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:55.951334" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2024-06-26T18:36:55.969860" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-06-26T20:33:32.406544" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-26T20:33:32.424122" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_XPATH}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-26T18:36:55.951055" elapsed="0.046884"/>
+<status status="PASS" start="2024-06-26T20:33:32.406381" elapsed="0.048147"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:55.998232" level="INFO">Clicking element 'id:submit'.</msg>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T20:33:32.454973" level="INFO">Clicking button 'id:submit'.</msg>
 <arg>${SUBMIT_BTN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-26T18:36:55.998094" elapsed="0.025964"/>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T20:33:32.454770" elapsed="0.042699"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:56.040313" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Your username is invalid!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-06-26T18:36:56.024200" elapsed="0.016170"/>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-26T20:33:32.497653" elapsed="0.006598"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-26T18:36:56.040498" elapsed="0.071733"/>
+<status status="PASS" start="2024-06-26T20:33:32.504473" elapsed="0.072848"/>
 </kw>
-<status status="PASS" start="2024-06-26T18:36:53.521112" elapsed="2.591275"/>
+<status status="PASS" start="2024-06-26T20:33:28.314217" elapsed="4.263283"/>
 </test>
-<test id="s1-t3" name="Test case 3: Negative password test" line="29">
+<test id="s1-t3" name="Test Case #3: Negative password test" line="30">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:56.112960" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<msg time="2024-06-26T20:33:32.578084" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-26T18:36:56.112806" elapsed="1.970650"/>
+<status status="PASS" start="2024-06-26T20:33:32.577946" elapsed="66.596936"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-26T18:36:58.084216" elapsed="0.318464"/>
+<status status="PASS" start="2024-06-26T20:34:39.175890" elapsed="0.482978"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Test Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-26T20:34:39.659086" elapsed="0.013315"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:58.403276" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<msg time="2024-06-26T20:34:39.672885" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
 <arg>${USERNAME_XPATH}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-26T18:36:58.402941" elapsed="0.131882"/>
+<status status="PASS" start="2024-06-26T20:34:39.672547" elapsed="0.137065"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:58.535244" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2024-06-26T18:36:58.553697" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-06-26T20:34:39.810271" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-26T20:34:39.840342" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_XPATH}</arg>
 <arg>${INV_PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-26T18:36:58.535035" elapsed="0.045915"/>
+<status status="PASS" start="2024-06-26T20:34:39.809986" elapsed="0.066892"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:58.581265" level="INFO">Clicking element 'id:submit'.</msg>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T20:34:39.878968" level="INFO">Clicking button 'id:submit'.</msg>
 <arg>${SUBMIT_BTN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-26T18:36:58.581102" elapsed="0.024883"/>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T20:34:39.878702" elapsed="0.046909"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-06-26T18:36:58.623890" level="INFO">Current page contains text 'Your password is invalid!'.</msg>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Your password is invalid!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-06-26T18:36:58.606125" elapsed="0.017902"/>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-26T20:34:39.927282" elapsed="0.022711"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-26T18:36:58.624172" elapsed="0.071404"/>
+<status status="PASS" start="2024-06-26T20:34:39.950433" elapsed="0.084723"/>
 </kw>
-<status status="PASS" start="2024-06-26T18:36:56.112566" elapsed="2.583175"/>
+<status status="PASS" start="2024-06-26T20:33:32.577690" elapsed="67.457666"/>
 </test>
 <doc>Login Script using Selenium with Robot Framework</doc>
-<status status="PASS" start="2024-06-26T18:36:49.773835" elapsed="8.922273"/>
+<status status="PASS" start="2024-06-26T20:33:22.634853" elapsed="77.400945"/>
 </suite>
 <statistics>
 <total>

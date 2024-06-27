@@ -22,7 +22,7 @@ Test Case #1: Positive LogIn test
     Click Button    ${SUBMIT_BTN}
     Wait Until Location Contains   practicetestautomation.com/logged-in-successfully/
     Page Should Contain     Congratulations
-    Page Should Contain    successfully logged in
+    Page Should Contain     successfully logged in
     Page Should Contain Element     xpath://*[@id="loop-container"]/div/article/div[2]/div/div/div/a
     Close Browser
 
